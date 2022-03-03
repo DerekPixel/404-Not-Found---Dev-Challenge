@@ -84,10 +84,12 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 64px;
+  /* font-size: 64px; */
+  font-size: calc(40px + 2vw);
   line-height: 95px;
   letter-spacing: -0.035em;
-  width: 15ch;
+  max-width: 720px;
+  min-width: 375px;
 }
 
 h2 {
@@ -100,32 +102,44 @@ h2 {
 
 header {
   margin-top: 40px;
-  margin-bottom: 100px;
+  margin-bottom: calc(50px + 5vw);
   margin-left: 70px;
 }
 
 main {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .image-container {
   flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container-inner {
+  max-width: 100%;
 }
 
 img {
-  width: 100%;
+  width: 75%;
 }
 
 .page-info {
   flex: 1 1 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-paragraph {
-  margin: 36px 0;
+  margin: 36px 0 64px 0;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.035em;
-  width: 30ch;
+  max-width: 30ch;
+  min-width: 375px;
+  /* flex: 1 1 375px; */
 }
 
 .homepage-link {
